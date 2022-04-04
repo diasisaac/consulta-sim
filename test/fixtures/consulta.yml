@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: 2022-04-04
+  horario: 2022-04-04 10:19:49
+  medico: one
+  paciente: one
+
+two:
+  data: 2022-04-04
+  horario: 2022-04-04 10:19:49
+  medico: two
+  paciente: two
