@@ -3,8 +3,8 @@ class Paciente < ApplicationRecord
   validates :cpf, presence: true , uniqueness: true,  length: {is: 11}
   validate :valida_data
 
-  has_one :endereco
-  has_many :consultums
+  has_one :endereco, :dependent => :destroy
+  has_many :consultums, :dependent => :destroy
 
   accepts_nested_attributes_for :endereco, allow_destroy: true
 
