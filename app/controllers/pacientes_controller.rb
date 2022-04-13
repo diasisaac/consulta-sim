@@ -48,6 +48,7 @@ class PacientesController < ApplicationController
   # PATCH/PUT /pacientes/1 or /pacientes/1.json
   def update
     @paciente = Paciente.find(params[:id])
+    # @paciente.endereco = Endereco.find(endereco_params[:id])
 
     respond_to do |format|
       if @paciente.update(paciente_params)
@@ -64,6 +65,7 @@ class PacientesController < ApplicationController
   def destroy
     @paciente = Paciente.find(params[:id])
     @paciente.destroy
+    @paciente.endereco.destroy
 
     respond_to do |format|
       format.html { redirect_to pacientes_url, notice: "Paciente was successfully destroyed." }
@@ -79,6 +81,6 @@ class PacientesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def paciente_params
-      params.require(:paciente).permit(:nome, :data_nascimeto, :cpf, :endereco_attributes[:cep, :cidade, :bairro, :logradouro, :complemento])
+      params.require(:paciente).permit(:nome, :data_de_nascimento, :cpf, :email, {:endereco_attributes => [:logradouro, :complemento, :cep, :bairro, :cidade]})
     end
 end
