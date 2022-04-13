@@ -1,6 +1,6 @@
 class Medico < ApplicationRecord
   has_many :consultums, dependent: :destroy
-  has_many :pacientes, through: consultums
+  has_many :pacientes
 
   validates :nome, presence: true, numericality: false, uniqueness: false
   validates :cpf, presence: true , uniqueness: true,  length: {is: 11}
