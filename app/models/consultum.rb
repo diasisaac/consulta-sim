@@ -3,7 +3,7 @@ class Consultum < ApplicationRecord
   belongs_to :paciente
 
   validates :data, :horario,presence: true
-  validate valida_data
+  validate :valida_data
   validates_associated :medico
   validates_associated :paciente
 
