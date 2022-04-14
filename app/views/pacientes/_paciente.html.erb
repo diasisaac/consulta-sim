@@ -5,7 +5,7 @@
   </p>
 
   <p>
-    <strong>Data nascimeto:</strong>
+    <strong>Data nascimento:</strong>
     <%= paciente.data_nascimeto %>
   </p>
 
@@ -13,5 +13,39 @@
     <strong>Cpf:</strong>
     <%= paciente.cpf %>
   </p>
+
+  <p>
+    <strong>Email:</strong>
+    <%= paciente.email %>
+  </p>
+
+  <p>
+    <strong>CEP:</strong>
+    <%= paciente.endereco.cep%>
+  </p>
+
+  <p>
+    <strong>Cidade:</strong>
+    <%= paciente.endereco.cidade%>
+  </p>
+
+  <p>
+    <strong>Bairro:</strong>
+    <%= paciente.endereco.bairro%>
+  </p>
+
+  <p>
+    <strong>Logradouro:</strong>
+    <%= paciente.endereco.logradouro%>
+  </p>
+
+
+  <p>
+    <strong>Complemento:</strong>
+    <%= paciente.endereco.complemento%>
+  </p>
+
+
+
 
 </div>

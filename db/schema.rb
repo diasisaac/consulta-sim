@@ -48,6 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_04_131948) do
     t.string "nome"
     t.date "data_nascimeto"
     t.integer "cpf"
+    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

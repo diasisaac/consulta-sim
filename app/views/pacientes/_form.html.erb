@@ -29,6 +29,11 @@
     <%= form.number_field :cpf %>
   </div>
 
+  <div>
+    <%= form.label :email, style: "display: block" %>
+    <%= form.text_field :email %>
+  </div>
+
   <%= form.fields_for :endereco do |endereco_form| %>
     Cidade  : <%= endereco_form.text_field :cidade %>
     Logradouro  : <%= endereco_form.text_field :logradouro %>

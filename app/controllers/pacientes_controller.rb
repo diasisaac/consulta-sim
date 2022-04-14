@@ -4,18 +4,19 @@ class PacientesController < ApplicationController
   # GET /pacientes or /pacientes.json
   def index
     @pacientes = Paciente.all
+
   end
 
   # GET /pacientes/1 or /pacientes/1.json
   def show
     @paciente = Paciente.find(params[:id])
+
   end
 
   # GET /pacientes/new
   def new
     @paciente = Paciente.new
     @paciente.build_endereco
-
 
   end
 
@@ -81,6 +82,6 @@ class PacientesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def paciente_params
-      params.require(:paciente).permit(:nome, :data_de_nascimento, :cpf, :email, {:endereco_attributes => [:logradouro, :complemento, :cep, :bairro, :cidade]})
+      params.require(:paciente).permit(:nome, :data_nascimeto, :cpf, :email, {:endereco_attributes => [:logradouro, :complemento, :cep, :bairro, :cidade]})
     end
 end
