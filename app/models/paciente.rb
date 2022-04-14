@@ -6,7 +6,8 @@ class Paciente < ApplicationRecord
   validates :email, presence: true, uniqueness: true , length: {minimum: 5}
 
   has_one :endereco, :dependent => :destroy
-  has_many :consultums, :dependent => :destroy
+  has_many :consultums,:dependent => :destroy
+  has_many :medicos, through: :consultums
 
   accepts_nested_attributes_for :endereco, allow_destroy: true
 
