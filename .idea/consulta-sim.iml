@@ -40,6 +40,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activestorage (v7.0.2.3, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v7.0.2.3, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.8.0, ruby-3.1.1-p18) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="ansi (v1.5.0, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bindex (v0.8.1, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootsnap (v1.11.1, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.4, ruby-3.1.1-p18) [gem]" level="application" />
@@ -81,6 +82,7 @@
     <orderEntry type="library" scope="PROVIDED" name="mime-types-data (v3.2022.0105, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mini_mime (v1.1.2, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.15.0, ruby-3.1.1-p18) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="minitest-reporters (v1.5.0, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="msgpack (v1.4.5, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_test (v0.1.2, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="net-imap (v0.2.3, ruby-3.1.1-p18) [gem]" level="application" />
@@ -102,11 +104,15 @@
     <orderEntry type="library" scope="PROVIDED" name="regexp_parser (v2.2.1, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="reline (v0.3.1, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rexml (v3.2.5, ruby-3.1.1-p18) [gem]" level="application" />
+
+    <orderEntry type="library" scope="PROVIDED" name="ruby-progressbar (v1.11.0, ruby-3.1.1-p18) [gem]" level="application" />
+
     <orderEntry type="library" scope="PROVIDED" name="rspec (v3.11.0, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-core (v3.11.0, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v3.11.0, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v3.11.1, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-support (v3.11.0, ruby-3.1.1-p18) [gem]" level="application" />
+
     <orderEntry type="library" scope="PROVIDED" name="rubyzip (v2.3.2, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v4.1.0, ruby-3.1.1-p18) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v4.0.3, ruby-3.1.1-p18) [gem]" level="application" />
@@ -139,7 +145,10 @@
         <option value="benchmark" />
         <option value="channel" />
         <option value="controller" />
+
+
         <option value="cucumber:install" />
+
         <option value="generator" />
         <option value="helper" />
         <option value="integration_test" />
@@ -170,7 +179,10 @@
         <option value="benchmark" />
         <option value="channel" />
         <option value="controller" />
+
+
         <option value="cucumber:install" />
+
         <option value="generator" />
         <option value="helper" />
         <option value="integration_test" />
@@ -273,6 +285,8 @@
               <RakeTaskImpl description="Lookup nested dependencies for TEMPLATE (like messages/show or comments/_comment.html)" fullCommand="cache_digests:nested_dependencies" id="nested_dependencies" />
             </subtasks>
           </RakeTaskImpl>
+
+
           <RakeTaskImpl description="Alias for cucumber:ok" fullCommand="cucumber" id="cucumber" />
           <RakeTaskImpl id="cucumber">
             <subtasks>
@@ -283,6 +297,7 @@
               <RakeTaskImpl description="" fullCommand="cucumber:statsetup" id="statsetup" />
             </subtasks>
           </RakeTaskImpl>
+
           <RakeTaskImpl id="db">
             <subtasks>
               <RakeTaskImpl description="Creates the database from DATABASE_URL or config/database.yml for the current RAILS_ENV (use db:create:all to create all databases in the config). Without RAILS_ENV or when RAILS_ENV is development, it defaults to creating the development and test databases, except when DATABASE_URL is present" fullCommand="db:create" id="create" />
@@ -501,7 +516,10 @@
           </RakeTaskImpl>
           <RakeTaskImpl description="" fullCommand="default" id="default" />
           <RakeTaskImpl description="" fullCommand="environment" id="environment" />
+
+
           <RakeTaskImpl description="" fullCommand="features" id="features" />
+
           <RakeTaskImpl id="railties">
             <subtasks>
               <RakeTaskImpl id="install">

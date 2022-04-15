@@ -68,6 +68,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    ansi (1.5.0)
     bindex (0.8.1)
     bootsnap (1.11.1)
       msgpack (~> 1.2)
@@ -161,6 +162,11 @@ GEM
     mime-types-data (3.2022.0105)
     mini_mime (1.1.2)
     minitest (5.15.0)
+    minitest-reporters (1.5.0)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
     msgpack (1.4.5)
     multi_test (0.1.2)
     net-imap (0.2.3)
@@ -218,6 +224,9 @@ GEM
     reline (0.3.1)
       io-console (~> 0.5)
     rexml (3.2.5)
+
+    ruby-progressbar (1.11.0)
+
     rspec (3.11.0)
       rspec-core (~> 3.11.0)
       rspec-expectations (~> 3.11.0)
@@ -231,6 +240,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.11.0)
     rspec-support (3.11.0)
+
     rubyzip (2.3.2)
     selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
@@ -284,8 +294,11 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   debug
+  ffi
   importmap-rails
   jbuilder
+  minitest
+  minitest-reporters
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.3)
   rspec
