@@ -65,7 +65,11 @@ group :development do
   # gem "spring"
 end
 
+
 gem "ffi"
+
+
+gem "rspec"
 
 
 group :test do
@@ -73,7 +77,13 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+
   gem 'minitest'
   gem 'minitest-reporters'
+
+
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+
 
 end
