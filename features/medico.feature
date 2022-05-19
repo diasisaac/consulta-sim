@@ -1,5 +1,5 @@
 
-Feature: Medico
+Feature: Criar Medico
   As a administrador do sistema
   I want to adicionar, remover, mostrar, e atualizar um medico
   So that Eu nao tenho que fazer isso manualmente
